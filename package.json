@@ -2,6 +2,7 @@
   "name": "r3f-loading-animations",
   "private": true,
   "version": "0.0.0",
+  "homepage": "https://Ephriam5.github.io/stratigemdigital/",
   "type": "module",
   "scripts": {
     "dev": "vite",
