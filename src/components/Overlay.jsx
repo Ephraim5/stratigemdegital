@@ -18,7 +18,7 @@ export const Overlay = () => {
       {progress === 100 && (
         <div className={`intro ${play ? "intro--disappear" : "intro"}`}>
           {/* Logo and Title */}
-          <h1 className="logo text-center p-4">
+          <h1 className="logo text-center p-4 " style={{fontSize:20}}>
             <img
               src="./images/Stratigem Digital Logo.png"
               alt="Stratigem Digital Logo"
