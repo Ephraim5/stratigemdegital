@@ -3,4 +3,3 @@ Stratagemdigital the best site with 3D model
 With all the best 3D model
 ![earth](https://github.com/user-attachments/assets/22b5052d-0765-4fd0-b477-755615210df2)
 updated by Ephraim Senior Dev
-"# strategy-site" 
