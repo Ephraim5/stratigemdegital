@@ -6,42 +6,47 @@ export const Overlay = () => {
   const { progress } = useProgress();
   const { play, end, setPlay, hasScroll } = usePlay();
   const navigate = useNavigate();
+  setTimeout(() => {
+    if (end) {
+      setPlay(false)
+    }
+  }, 1000)
 
   return (
     <div
-      className={`overlay ${play ? "overlay--disable" : ""} ${
-        hasScroll ? "overlay--scrolled" : ""
-      }`}
+      className={`overlay ${play ? "overlay--disable" : ""} ${hasScroll ? "overlay--scrolled" : ""
+        }`}
     >
       <div className={`loader ${progress === 100 ? "loader--disappear" : ""}`} />
 
       {progress === 100 && (
         <div className={`intro ${play ? "intro--disappear" : "intro"}`}>
-          {/* Logo and Title */}
-          <h1 className="logo text-center p-4 " style={{fontSize:20}}>
+          {/* Log4o and Title */}
+          <h1 className="logo text-center p-4 " style={{ fontSize: 30 }}>
             <img
               src="./images/Stratigem Digital Logo.png"
               alt="Stratigem Digital Logo"
-              className="img mx-auto"
+              className="img mx-auto "
             />
             Welcome to Stratigem Digital
           </h1>
 
           {/* Default About Us Navigation Text (visible on all screens) */}
           <h2
-            className="set font-serif font-bold text-sm sm:text-xl md:text-2xl uppercase w-full text-center px-4 break-words pl-10 relative"
+            className="set about font-serif font-bold text-sm sm:text-xl md:text-2xl uppercase w-full text-center px-4 break-words pl-10 relative"
             style={{ zIndex: 15900 }}
-            onClick={() => {
+            onClick={(e) => {
               console.log("navigating...");
               navigate("/about");
             }}
+
           >
             About Us
           </h2>
 
           {/* Additional About Button for extra-small screens only */}
           <button
-            className="about-btn block sm:hidden flex items-center justify-center bg-blue-600 text-white rounded-full p-2 mt-4 mx-auto z-50  cursor-pointer hover:bg-blue-700 transition-colors duration-300"
+            className="about-btn about block sm:hidden flex items-center justify-center bg-blue-600 text-white rounded-full p-2 mt-4 mx-auto z-50  cursor-pointer hover:bg-blue-700 transition-colors duration-300"
             onClick={() => {
               console.log("navigating to about from small screen button...");
               navigate("/about");
@@ -66,6 +71,9 @@ export const Overlay = () => {
           </button>
 
           {/* Intro Scroll Message */}
+          <br></br>
+          <br></br>
+          <br></br>
           <b className="intro__scroll block mt-4 text-center px-4">
             Your Growth Our Mission - Let's Launch Your Business to New Heights!
             <br />
@@ -77,6 +85,9 @@ export const Overlay = () => {
           <button
             className="explore bg-white mt-6 px-4 py-2 rounded shadow hover:shadow-lg transition-all duration-300 block mx-auto"
             onClick={() => {
+              if(end){
+                document.location.reload()
+              }
               setPlay(true);
             }}
           >
@@ -87,8 +98,7 @@ export const Overlay = () => {
 
       {/* Outro Section */}
       <div className={`outro ${end ? "outro--appear" : ""}`}>
-        <p className="outro__text text-center px-4">
-          Wish you had a great Services with us... Reload to explore again
+        <p className="outro__text text-center px-4 " style={{ top: -1, }}>
         </p>
       </div>
     </div>

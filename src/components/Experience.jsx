@@ -15,7 +15,7 @@ import { TextSection } from "./TextSection";
 const LINE_NB_POINTS = 1000;
 const CURVE_DISTANCE = 250;
 const CURVE_AHEAD_CAMERA = 0.008;
-const CURVE_AHEAD_AIRPLANE = 0.02;
+const CURVE_AHEAD_AIRPLANE = 0.0001;
 const AIRPLANE_MAX_ANGLE = 35;
 const FRICTION_DISTANCE = 42;
 
@@ -521,9 +521,7 @@ export const Experience = () => {
   useEffect(() => {
     if (play) {
       planeInTl.current.play();
-      setTimeout(()=>{
-        setPlay(false)
-      },20000)
+    
     }
   }, [play]);
 
@@ -543,7 +541,7 @@ export const Experience = () => {
             />
           </group>
           <group ref={airplane}>
-            <Float floatIntensity={1} speed={1.5} rotationIntensity={0.5}>
+            <Float floatIntensity={1} speed={0.9} rotationIntensity={0.5}>
               <Airplane
                 rotation-y={Math.PI / 2}
                 scale={[0.2, 0.2, 0.2]}

@@ -8,6 +8,11 @@
   width: 100vw;
   height: 100vh;
 }
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   margin: 0;
@@ -43,16 +48,23 @@ body {
 }
 
 .overlay {
-  position: absolute;
+  position: fixed; /* Ensures it stays on top and covers everything */
   top: 0;
   left: 0;
-  bottom: 0;
-  right: 0;
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+  background: transparent; /* Or any desired background color */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .overlay--disable {
   pointer-events: none;
+  display: none; /* Hide overlay when play starts */
 }
+
 
 .loader {
   position: absolute;
@@ -229,6 +241,52 @@ body {
   .outro__text {
     font-size: 1rem;
   }
+  
+.explore {
+  padding: 0.4rem 1rem;
+  border: none;
+  font-family: "DM Serif Display", serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  color: #3535cc;
+  border-radius: 32px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 320px;
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.42s ease-in-out;
+  animation: fadeIn 2.4s ease-in-out 2s forwards;
+  opacity: 0;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.explore:hover {
+  color: white;
+}
+
+.explore:hover:before {
+  width: 200%;
+  height: 300%;
+  border-radius: 100%;
+}
+
+.explore:before {
+  content: "";
+  background: #3535cc;
+  position: absolute;
+  width: 0%;
+  bottom: 0;
+  left: 50%;
+  height: 0%;
+  transition: 0.42s ease-in-out;
+  z-index: -1;
+  transform: translateX(-50%) translateY(50%);
+}
+
 }
 
 /* ANIMATIONS */

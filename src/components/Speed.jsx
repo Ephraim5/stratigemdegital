@@ -8,29 +8,19 @@ const MAX_OPACITY = 0.1;
 
 const SpeedShape = () => {
   const ref = useRef();
-  let randomPosition = {
-    x: 0,
-    y: 0,
-    z: 0,
-  };
-  let randomSpeed = 0;
+  const randomSpeed = useRef(MathUtils.randFloat(0.005, 0.03)); // Slower speed
 
-  const resetRandom = () => {
-    randomPosition = {
-      x: MathUtils.randFloatSpread(4),
-      y: MathUtils.randFloatSpread(2),
-      z: MathUtils.randFloatSpread(4),
-    };
-    randomSpeed = MathUtils.randFloat(2, 5);
+  const randomPosition = {
+    x: MathUtils.randFloatSpread(4),
+    y: MathUtils.randFloatSpread(2),
+    z: MathUtils.randFloatSpread(4),
   };
-  resetRandom();
 
   useFrame((_state, delta) => {
     if (ref.current) {
-      ref.current.position.z += randomSpeed * delta;
+      ref.current.position.z += randomSpeed.current * delta; // Uses a constant slow speed
       if (ref.current.position.z > 4) {
-        resetRandom();
-        ref.current.position.z = randomPosition.z;
+        ref.current.position.z = -4; // Reset position instead of recalculating speed
       }
     }
   });
