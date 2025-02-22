@@ -15,7 +15,7 @@ import { TextSection } from "./TextSection";
 const LINE_NB_POINTS = 1000;
 const CURVE_DISTANCE = 250;
 const CURVE_AHEAD_CAMERA = 0.008;
-const CURVE_AHEAD_AIRPLANE = 0.0001;
+const CURVE_AHEAD_AIRPLANE = 0.02;
 const AIRPLANE_MAX_ANGLE = 35;
 const FRICTION_DISTANCE = 42;
 
@@ -103,15 +103,15 @@ export const Experience = () => {
         subtitle: `Social media is where conversations happen, and will make sure your brand is part of it. Our Meta Ads campaigns combine creative storytelling with precise targeting to drive engagement and conversions.`,
       },
       {
-        cameraRailDist: 1,
+        cameraRailDist: -1,
         position: new Vector3(
-          curvePoints[7].x + 3.5,
-          curvePoints[7].y,
-          curvePoints[7].z
+          curvePoints[7].x + 3,
+          curvePoints[7].y + 1, // Increase the Y value
+          curvePoints[7].z + 100
         ),
         title: "Linkedin B2B Lead Generation",
-        subtitle: `Linkedin isn't just a social network is a goldmine for B2B opportunities. We create data-driven campaigns to connect you with decision-makers and grow your professional network. `,
-      },
+        subtitle: `Linkedin isn't just a social network; it's a goldmine for B2B opportunities. We create data-driven campaigns to connect you with decision-makers and grow your professional network.`,
+      }      
     ];
   }, []);
 
@@ -272,18 +272,18 @@ export const Experience = () => {
         position: new Vector3(
           curvePoints[7].x + 12,
           curvePoints[7].y - 5,
-          curvePoints[7].z + 60
+          curvePoints[7].z + 30
         ),
-        rotation: new Euler(-Math.PI / 4, -Math.PI / 6, 0),
+        rotation: new Euler(-Math.PI / 4, -Math.PI / 6),
       },
       {
         scale: new Vector3(3, 3, 3),
         position: new Vector3(
           curvePoints[7].x - 12,
           curvePoints[7].y + 5,
-          curvePoints[7].z + 120
+          curvePoints[7].z + 86
         ),
-        rotation: new Euler(Math.PI / 4, Math.PI / 6, 0),
+        rotation: new Euler(Math.PI / 4, Math.PI / 6),
       },
     ],
     []
@@ -303,7 +303,7 @@ export const Experience = () => {
   const scroll = useScroll();
   const lastScroll = useRef(0);
 
-  const { play, setHasScroll, end, setEnd,setPlay } = usePlay();
+  const { play, setHasScroll, end, setEnd } = usePlay();
 
   useFrame((_state, delta) => {
     if (window.innerWidth > window.innerHeight) {
@@ -521,7 +521,6 @@ export const Experience = () => {
   useEffect(() => {
     if (play) {
       planeInTl.current.play();
-    
     }
   }, [play]);
 
@@ -541,7 +540,7 @@ export const Experience = () => {
             />
           </group>
           <group ref={airplane}>
-            <Float floatIntensity={1} speed={0.9} rotationIntensity={0.5}>
+            <Float floatIntensity={1} speed={1.5} rotationIntensity={0.5}>
               <Airplane
                 rotation-y={Math.PI / 2}
                 scale={[0.2, 0.2, 0.2]}

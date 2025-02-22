@@ -1,32 +1,57 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from './Home';
-import About from './About';
-import { PlayProvider } from './contexts/Play';
+import { Routes, Route } from "react-router-dom";
+import { ScrollControls } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
+import { EffectComposer, Noise } from "@react-three/postprocessing";
+import { useMemo } from "react";
+import { Experience } from "./components/Experience";
+import { Overlay } from "./components/Overlay";
+import { usePlay } from "./contexts/Play";
+import About from "./About";
 
-function App() {
-  //this is what am using to render your page and handle the 3D effect you added and also allowing multipy pages using router
-  function Site() {
-    return (
-      <>
-      <PlayProvider>
-        <Home />
-      </PlayProvider>
-      </>
-      
-    )
-  }
+function Home() {
+  const { play, end } = usePlay();
+  const effects = useMemo(
+    () => (
+      <EffectComposer>
+        <Noise opacity={0.08} />
+      </EffectComposer>
+    ),
+    []
+  );
 
   return (
-    <Router>
-      { /* here i render my navbar to be avalible in all screen*/}
+    <>
+      <Canvas>
+        <color attach="background" args={["#ececec"]} />
+        <ScrollControls
+          pages={play && !end ? 20 : 0}
+          damping={0.5}
+          style={{
+            top: "10px",
+            left: "0px",
+            bottom: "10px",
+            right: "10px",
+            width: "auto",
+            height: "auto",
+            animation: "fadeIn 2.4s ease-in-out 1.2s forwards",
+            opacity: 0,
+          }}
+        >
+          <Experience />
+        </ScrollControls>
+        {effects}
+      </Canvas>
+      <Overlay />
+    </>
+  );
+}
 
-      {/* here i link the page to be able to route using react-router-dom*/}
-      <Routes>
-        <Route path="/" element={<Site />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </Router>
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   );
 }
 

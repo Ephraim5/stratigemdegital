@@ -9,7 +9,6 @@ export const PlayProvider = ({ children }) => {
 
   return (
     <Context.Provider
-    
       value={{
         play,
         setPlay,

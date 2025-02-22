@@ -3,24 +3,34 @@ import { useFrame } from "@react-three/fiber";
 import { useRef } from "react";
 import { AdditiveBlending, DoubleSide, MathUtils } from "three";
 
-const INSTANCES = 150;
+const INSTANCES = 240;
 const MAX_OPACITY = 0.1;
 
 const SpeedShape = () => {
   const ref = useRef();
-  const randomSpeed = useRef(MathUtils.randFloat(0.005, 0.03)); // Slower speed
-
-  const randomPosition = {
-    x: MathUtils.randFloatSpread(4),
-    y: MathUtils.randFloatSpread(2),
-    z: MathUtils.randFloatSpread(4),
+  let randomPosition = {
+    x: 0,
+    y: 0,
+    z: 0,
   };
+  let randomSpeed = 0;
+
+  const resetRandom = () => {
+    randomPosition = {
+      x: MathUtils.randFloatSpread(8),
+      y: MathUtils.randFloatSpread(5),
+      z: MathUtils.randFloatSpread(8),
+    };
+    randomSpeed = MathUtils.randFloat(16, 20);
+  };
+  resetRandom();
 
   useFrame((_state, delta) => {
     if (ref.current) {
-      ref.current.position.z += randomSpeed.current * delta; // Uses a constant slow speed
-      if (ref.current.position.z > 4) {
-        ref.current.position.z = -4; // Reset position instead of recalculating speed
+      ref.current.position.z += randomSpeed * delta;
+      if (ref.current.position.z > 5) {
+        resetRandom();
+        ref.current.position.z = randomPosition.z;
       }
     }
   });
