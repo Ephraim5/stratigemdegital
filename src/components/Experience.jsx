@@ -105,7 +105,7 @@ export const Experience = () => {
       {
         cameraRailDist: -1,
         position: new Vector3(
-          curvePoints[7].x + 3,
+          curvePoints[7].x - 2,
           curvePoints[7].y + 1, // Increase the Y value
           curvePoints[7].z + 100
         ),
