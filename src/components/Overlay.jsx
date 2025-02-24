@@ -27,8 +27,10 @@ export const Overlay = () => {
       <div className={`loader ${progress === 100 ? "loader--disappear" : ""}`} />
       {progress === 100 && (
         <div className={`intro ${play ? "intro--disappear" : ""}`}>
+          <img src="./images/Stratigem Digital Logo.png" alt="" style={{ display:play ? 'none':''}} className="img" />
           <h1 className="logo">
             Welcome to Stratigem Digital
+            
           </h1>
           <p className="intro__scroll">
             Your Growth Our Mission Let's Launch Your Business to New Heights!
