@@ -33,7 +33,7 @@ export const Overlay = () => {
             
           </h1>
           <p className="intro__scroll">
-            Your Growth Our Mission Let's Launch Your Business to New Heights!
+            Your Growth Our Mission Let's Take Your Business to New Heights!
             <br />
             <br />
             <center>Scroll to begin the journey</center>

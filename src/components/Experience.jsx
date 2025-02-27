@@ -60,7 +60,7 @@ export const Experience = () => {
           curvePoints[2].z
         ),
         title: "SEO(Search Engine Optimization)",
-        subtitle: `Get found by the customer who matter most. Our SEO strategies are tailored to your industry,combining technical optimization, keyword targeting, and content enhancement to boost your visibility on Google and other search engines.`,
+        subtitle: `Get noticed by the customer who matter the most. Our SEO strategies are tailored to your industry,combining technical optimization, keyword targeting, and content enhancement to boost your visibility..`,
       },
       {
         cameraRailDist: -1,

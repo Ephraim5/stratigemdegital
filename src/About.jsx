@@ -73,7 +73,7 @@ function Contact({ handleSubmit, name, setName, phone, setPhone, email, setEmail
         <form className='mt-12 flex flex-col gap-8' onSubmit={handleSubmit}>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Your Name</span>
-            <input type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder="What's your good name?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
+            <input type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder="What's your  name?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
           </label>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Your Email</span>
@@ -106,7 +106,7 @@ function Contact({ handleSubmit, name, setName, phone, setPhone, email, setEmail
 function WriteUp() {
   return (<div className='xl:mt-12 overflow-hidden bg-[rgb(195,239,252)]'>
     <motion.div variants={slideIn("left", "tween", 0.2, 1)} className='flex-[0.75] bg-black-100 p-8 rounded-2xl w-full'>
-      <h3 className={`${styles.sectionHeadText}`}>About Us</h3>
+      <h3 className={`${styles.sectionHeadText}`}>Contact Us</h3>
       <p className={`${styles.sectionSubText} font-extrabold text-white`} > Letâ€™s Launch Your Digital Strategy      </p>
     <p className={` ${styles.sectionSubText}`} > Have questions or ready to get started? Our team is here to help. Fill out the form below, and weâ€™ll get back to you within 24 hours.</p>
     </motion.div ></div >);
