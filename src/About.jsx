@@ -32,7 +32,7 @@ export default function About() {
   };
 
   return (
-    <div className='relative p-10 z-0 bg-[rgb(195,239,252)] flex-1 w-full h-fit overflow-hidden'>
+    <div className='relative p-2 z-0 bg-[rgb(195,239,252)] flex-1 w-full h-fit overflow-hidden'>
       <StarsCanvas />
       <WriteUp />
       {isOpen && (
