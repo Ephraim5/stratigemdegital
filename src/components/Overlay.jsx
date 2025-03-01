@@ -49,8 +49,8 @@ export const Overlay = () => {
         </div>
       )}
       <div className={`outro ${end ? "outro--appear" : ""}`}>
-        <p className="outro__text">
-          Wish you had a great Services with us... Reload to explore again or wait for 6 seconds you will be redirected to about page...
+        <p className="outro__text p-11">
+          we hope you enjoyed your journey with us today, and now understand that the possibilities are endless. Reload explore again , or wait 6 seconds to be directed to our contact page 
         </p>
       </div>
     </div>

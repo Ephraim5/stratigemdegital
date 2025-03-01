@@ -50,6 +50,7 @@ export const Experience = () => {
           curvePoints[1].y,
           curvePoints[1].z
         ),
+        title:"Welcome Aboard",
         subtitle: `Stratigem Digital provides cutting-edge solutions for SEO, Web Development, Paid Ads Management, and more. Hop aboard and explore services designed to skyrocket your business success.`,
       },
       {
@@ -60,7 +61,7 @@ export const Experience = () => {
           curvePoints[2].z
         ),
         title: "SEO(Search Engine Optimization)",
-        subtitle: `Get noticed by the customer who matter the most. Our SEO strategies are tailored to your industry,combining technical optimization, keyword targeting, and content enhancement to boost your visibility..`,
+        subtitle: `Get noticed by the customer who matter the most. Our SEO strategies are tailored to your industry,combining technical optimization, keyword targeting, and content enhancement to boost your visibility on Google.`,
       },
       {
         cameraRailDist: -1,

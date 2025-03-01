@@ -73,23 +73,23 @@ function Contact({ handleSubmit, name, setName, phone, setPhone, email, setEmail
         <form className='mt-12 flex flex-col gap-8' onSubmit={handleSubmit}>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Your Name</span>
-            <input type='text' value={name} onChange={(e) => setName(e.target.value)} placeholder="What's your  name?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
+            <input type='text' value={name}  onChange={(e) => setName(e.target.value)} placeholder="What's your  name?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' required  />
           </label>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Your Email</span>
-            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="What's your email?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
+            <input type='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="What's your email?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium'  required />
           </label>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Your Phone Number</span>
-            <input type='tel' value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="What's your phone number?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
+            <input type='tel' value={phone} onChange={(e) => setPhone(e.target.value)} placeholder="What's your phone number?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium'  required />
           </label>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Your Business Website</span>
-            <input type='text' value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="What's your Business Website?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
+            <input type='text' value={business} onChange={(e) => setBusiness(e.target.value)} placeholder="What's your Business Website?" className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' required />
           </label>
           <label className='flex flex-col z-20'>
             <span className='text-white font-medium mb-4'>Service Interested In</span>
-            <textarea rows={7} value={message} onChange={(e) => setMessage(e.target.value)} placeholder='What Service are you interested in?' className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' />
+            <textarea rows={7} value={message} onChange={(e) => setMessage(e.target.value)} placeholder='What Service are you interested in?' className='bg-tertiary py-4 px-6 text-white rounded-lg outline-none border-none font-medium' required />
           </label>
           <button type='submit' className='bg-tertiary py-3 px-8 rounded-xl text-white font-bold shadow-md cursor-pointer z-20'>
             {loading ? "Loading..." : "Contact Us"}

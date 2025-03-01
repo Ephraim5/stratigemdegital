@@ -24,6 +24,7 @@ export function Cloud({ sceneOpacity, ...props }) {
           onBeforeCompile={fadeOnBeforeCompile}
           envMapIntensity={2}
           transparent
+          opacity={0.4}
         />
       </mesh>
     </group>
