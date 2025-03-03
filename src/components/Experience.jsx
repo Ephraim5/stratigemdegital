@@ -46,7 +46,7 @@ export const Experience = () => {
       {
         cameraRailDist: -1,
         position: new Vector3(
-          curvePoints[1].x - 3,
+          curvePoints[1].x - 1.5,
           curvePoints[1].y,
           curvePoints[1].z
         ),
@@ -56,7 +56,7 @@ export const Experience = () => {
       {
         cameraRailDist: 1.5,
         position: new Vector3(
-          curvePoints[2].x + 2,
+          curvePoints[2].x - 0.1,
           curvePoints[2].y,
           curvePoints[2].z
         ),
@@ -64,9 +64,9 @@ export const Experience = () => {
         subtitle: `Get noticed by the customer who matter the most. Our SEO strategies are tailored to your industry,combining technical optimization, keyword targeting, and content enhancement to boost your visibility on Google.`,
       },
       {
-        cameraRailDist: -1,
+        cameraRailDist: +0.1,
         position: new Vector3(
-          curvePoints[3].x - 3,
+          curvePoints[3].x - 1.3,
           curvePoints[3].y,
           curvePoints[3].z
         ),
@@ -76,7 +76,7 @@ export const Experience = () => {
       {
         cameraRailDist: 1.5,
         position: new Vector3(
-          curvePoints[4].x + 3.5,
+          curvePoints[4].x + 0.5,
           curvePoints[4].y,
           curvePoints[4].z - 12
         ),
@@ -86,7 +86,7 @@ export const Experience = () => {
       {
         cameraRailDist: -1,
         position: new Vector3(
-          curvePoints[5].x - 3,
+          curvePoints[5].x - 2.1,
           curvePoints[5].y,
           curvePoints[5].z
         ),
@@ -96,7 +96,7 @@ export const Experience = () => {
       {
         cameraRailDist: 1.5,
         position: new Vector3(
-          curvePoints[6].x + 2,
+          curvePoints[6].x - 0.4,
           curvePoints[6].y,
           curvePoints[6].z - 12
         ),
@@ -106,8 +106,8 @@ export const Experience = () => {
       {
         cameraRailDist: -1,
         position: new Vector3(
-          curvePoints[7].x - 2,
-          curvePoints[7].y + 1, // Increase the Y value
+          curvePoints[7].x - 1.3,
+          curvePoints[7].y + 0.5, // Increase the Y value
           curvePoints[7].z + 100
         ),
         title: "Linkedin B2B Lead Generation",
@@ -126,17 +126,17 @@ export const Experience = () => {
         position: new Vector3(3.5, -4, -10),
       },
       {
-        scale: new Vector3(4, 4, 4),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(-18, 0.2, -68),
         rotation: new Euler(-Math.PI / 5, Math.PI / 6, 0),
       },
       {
-        scale: new Vector3(2.5, 2.5, 2.5),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(10, -1.2, -52),
       },
       // FIRST POINT
       {
-        scale: new Vector3(4, 4, 4),
+        scale: new Vector3(1.0, 1.1, 1),
         position: new Vector3(
           curvePoints[1].x + 10,
           curvePoints[1].y - 4,
@@ -144,7 +144,7 @@ export const Experience = () => {
         ),
       },
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[1].x - 20,
           curvePoints[1].y + 4,
@@ -154,7 +154,7 @@ export const Experience = () => {
       },
       {
         rotation: new Euler(0, Math.PI / 7, Math.PI / 5),
-        scale: new Vector3(5, 5, 5),
+        scale: new Vector3(1.2, 1, 1),
         position: new Vector3(
           curvePoints[1].x - 13,
           curvePoints[1].y + 4,
@@ -163,7 +163,7 @@ export const Experience = () => {
       },
       {
         rotation: new Euler(Math.PI / 2, Math.PI / 2, Math.PI / 3),
-        scale: new Vector3(5, 5, 5),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[1].x + 54,
           curvePoints[1].y + 2,
@@ -171,7 +171,7 @@ export const Experience = () => {
         ),
       },
       {
-        scale: new Vector3(5, 5, 5),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[1].x + 8,
           curvePoints[1].y - 14,
@@ -180,7 +180,7 @@ export const Experience = () => {
       },
       // SECOND POINT
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[2].x + 6,
           curvePoints[2].y - 7,
@@ -188,7 +188,7 @@ export const Experience = () => {
         ),
       },
       {
-        scale: new Vector3(2, 2, 2),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[2].x - 2,
           curvePoints[2].y + 4,
@@ -196,7 +196,7 @@ export const Experience = () => {
         ),
       },
       {
-        scale: new Vector3(4, 4, 4),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[2].x + 12,
           curvePoints[2].y + 1,
@@ -206,7 +206,7 @@ export const Experience = () => {
       },
       // THIRD POINT
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[3].x + 3,
           curvePoints[3].y - 10,
@@ -214,7 +214,7 @@ export const Experience = () => {
         ),
       },
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[3].x - 10,
           curvePoints[3].y,
@@ -223,7 +223,7 @@ export const Experience = () => {
         rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
       },
       {
-        scale: new Vector3(4, 4, 4),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[3].x - 20,
           curvePoints[3].y - 5,
@@ -232,7 +232,7 @@ export const Experience = () => {
         rotation: new Euler(Math.PI, 0, Math.PI / 5),
       },
       {
-        scale: new Vector3(5, 5, 5),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[3].x + 0,
           curvePoints[3].y - 5,
@@ -242,7 +242,7 @@ export const Experience = () => {
       },
       // FOURTH POINT
       {
-        scale: new Vector3(2, 2, 2),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[4].x + 3,
           curvePoints[4].y - 10,
@@ -250,7 +250,7 @@ export const Experience = () => {
         ),
       },
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[4].x + 24,
           curvePoints[4].y - 6,
@@ -259,7 +259,7 @@ export const Experience = () => {
         rotation: new Euler(Math.PI / 4, 0, Math.PI / 5),
       },
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[4].x - 4,
           curvePoints[4].y + 9,
@@ -269,7 +269,7 @@ export const Experience = () => {
       },
       // FINAL
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1.2),
         position: new Vector3(
           curvePoints[7].x + 12,
           curvePoints[7].y - 5,
@@ -278,7 +278,7 @@ export const Experience = () => {
         rotation: new Euler(-Math.PI / 4, -Math.PI / 6),
       },
       {
-        scale: new Vector3(3, 3, 3),
+        scale: new Vector3(1, 1, 1),
         position: new Vector3(
           curvePoints[7].x - 12,
           curvePoints[7].y + 5,

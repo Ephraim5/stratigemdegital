@@ -165,7 +165,7 @@ body {
 
 .explore:before {
   content: "" ;
-  background: #3535cc ;
+  background: #0f47cb ;
   position: absolute ;
   width: 0% ;
   bottom: 0 ;
@@ -173,7 +173,7 @@ body {
   height: 0% ;
   transition: 0.42s ease-in-out ;
   z-index: -1 ;
-  transform: translateX(-50%) translateY(50%) ;
+  transform: translateX(-22%) translateY(30%) ;
 }
 
 .intro--disappear .explore {
@@ -189,6 +189,8 @@ body {
   display: flex ;
   align-items: center ;
   justify-content: center ;
+  flex-direction: column;
+  
   opacity: 0 ;
   transition: opacity 4s ease-in-out ;
 }
@@ -212,7 +214,7 @@ body {
    .explore{
     width:70%;
     height:60px;
-    font-size:10px;
+    font-size:13px;
    }
   .intro--disappear .logo {
     top: 22px ;

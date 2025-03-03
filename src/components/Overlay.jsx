@@ -12,7 +12,7 @@ export const Overlay = () => {
     if (end) {
       const timeout = setTimeout(() => {
         navigate("/about");
-      }, 6000); // 6 seconds delay for smooth navigation to about page
+      }, 7000); // 6 seconds delay for smooth navigation to about page
 
       return () => clearTimeout(timeout); // Cleanup in case component unmounts..
     }
@@ -32,6 +32,8 @@ export const Overlay = () => {
             Welcome to Stratigem Digital
             
           </h1>
+          <button type="button"  className=" absolute z-50 bg-blue-400 bottom-20 cursor-pointer hover:bg-blue-500 w-40 pb-3 pt-3 text-white font-bold py-2 px-4 rounded" onClick={()=>{console.log("hello yh am clicked")}}>{end ? "Redirecting..." : "Contact US"}</button>
+
           <p className="intro__scroll">
             Your Growth Our Mission Let's Take Your Business to New Heights!
             <br />
@@ -51,8 +53,11 @@ export const Overlay = () => {
       <div className={`outro ${end ? "outro--appear" : ""}`}>
         <p className="outro__text p-11">
           we hope you enjoyed your journey with us today, and now understand that the possibilities are endless. Reload explore again , or wait 6 seconds to be directed to our contact page 
+
         </p>
+
       </div>
+
     </div>
   );
 };

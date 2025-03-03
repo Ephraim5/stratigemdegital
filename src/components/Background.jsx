@@ -6,8 +6,8 @@ import { useRef } from "react";
 import * as THREE from "three";
 
 export const Background = ({ backgroundColors }) => {
-  const start = 0.2;
-  const end = -0.5;
+  const start = 0.0001;
+  const end = -0.9554;
 
   const gradientRef = useRef();
   const gradientEnvRef = useRef();
