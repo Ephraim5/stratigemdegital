@@ -52,7 +52,8 @@ export const Overlay = () => {
       )}
       <div className={`outro ${end ? "outro--appear" : ""}`}>
         <p className="outro__text p-11">
-          we hope you enjoyed your journey with us today, and now understand that the possibilities are endless. Reload explore again , or wait 6 seconds to be directed to our contact page 
+          We hope you enjoyed your journey with us today, and now understand that the possibilities are endless. Reload explore again , 
+          or wait 6 seconds to be directed to our contact page 
 
         </p>
 
