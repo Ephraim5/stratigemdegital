@@ -68,7 +68,7 @@ function Contact({ handleSubmit, name, setName, phone, setPhone, email, setEmail
       <motion.div variants={slideIn("left", "tween", 0.2, 1)} className='flex-[0.75] bg-[rgb(105,161,178)] p-8 rounded-2xl'>
         <h3 className={styles.sectionHeadText}>Contact Us</h3>
         <p className={`${styles.sectionSubText} font-extrabold text-white`}>Let’s Launch Your Digital Strategy</p>
-        <p className='text-cyan-50 mt-2'>Have questions or ready to get started? Our team is here to help. Fill out the form below, and we’ll get back to you within 24 hours.</p>
+        <p className='text-[#e9e8f1] mt-2'>Have questions or ready to get started? Our team is here to help. Fill out the form below, and we’ll get back to you within 24 hours.</p>
 
         <form className='mt-12 flex flex-col gap-8' onSubmit={handleSubmit}>
           <label className='flex flex-col z-20'>
